@@ -3,5 +3,76 @@
 @import 'reset';
 @import 'global';
 
+.header {
+  padding: 40px 0;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.menu {
+  &__list {
+    display: flex
+  }
+
+  &__item:not(:last-child) {
+    padding-right: 35px;
+  }
+
+  &__link {
+    color: $default;
+    text-transform: uppercase;
+    transition: color .3s;
+@extend %quicksand-400;
+
+    &:hover {
+     
+      color: $accent;
+      border-bottom: 1px solid $accent;
+       @extend %quicksand-500;
+    }
+  }
+
+  &__link--active {
+    color: $accent;
+    border-bottom: 1px solid $accent;
+     @extend %quicksand-500;
+  }
+}
+
+.user {
+  display: flex;
+
+  &__link + .user__link/* :not(:last-child) */ {
+    padding-left: 25px;
+  }
+
+  &__link {
+    position: relative;
+  }
+
+  &__numb {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: $accent;
+    color: #FFFFFf;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    font-size: 12px;
+    top: -9px;
+    right: -11px;
+
+  }
+
+}
+
+
+
+
 
 @import 'media';
