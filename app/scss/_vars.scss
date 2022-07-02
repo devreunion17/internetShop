@@ -1,5 +1,7 @@
-$accent: red;
+$accent: #fe3e57;
 $default: #29282d;
+$bg:#f6f6f6;
+$gray:#9d9d9d;
 
 %quicksand-400{
   font-family: 'Quicksand-Regular',
@@ -18,6 +20,7 @@ $default: #29282d;
   sans-serif;
   font-weight: 400;
 }
+
 %roboto-700 {
   font-family: 'Roboto-Bold',
     sans-serif;
