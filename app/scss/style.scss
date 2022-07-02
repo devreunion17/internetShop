@@ -27,13 +27,13 @@
     color: $default;
     text-transform: uppercase;
     transition: color .3s;
-    @extend %quicksand-400;
+    @extend %roboto-400;
 
     &:hover {
 
       color: $accent;
       border-bottom: 1px solid $accent;
-      @extend %quicksand-500;
+      @extend %roboto-700;
     }
   }
 
