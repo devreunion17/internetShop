@@ -6,6 +6,15 @@ $(function () {
     autoplay: true,
     autoplaySpeed: 2000
   });
+
+  $(".product__rating").rateYo({
+    rating: 3.6,
+    starWidth: "16px",
+    normalFill: "#ccccce",
+    ratedFill: "#ffc35b",
+    readOnly:true
+  });
+
+
+
 });
-
-
