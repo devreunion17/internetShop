@@ -42,3 +42,9 @@ background-color: $accent;
 @function max($numbers...) {
   @return m#{i}n(#{$numbers});
 }
+
+%link-more{
+     border: 1px solid $accent;
+     padding: 12px 26px;
+     text-transform: uppercase;
+}
