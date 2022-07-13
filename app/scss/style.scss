@@ -55,7 +55,7 @@
     position: relative;
   }
 
-/*   &__numb {
+  /*   &__numb {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -217,7 +217,7 @@
     display: block;
     border: none;
     width: 100%;
-    background-color: $bg ;
+    background-color: $bg;
     margin-top: 4px;
     height: 60px;
     padding: 0 15px;
@@ -243,24 +243,57 @@
   &__link--active {
     color: $accent;
   }
-  &__button{
+
+  &__button {
     text-transform: uppercase;
     background-color: $default;
-   @extend %roboto-400;
-   color: #fff;
-   padding: 14px 0;
-   border: none;
-   width: 100%;
-   cursor: pointer;
-   margin-bottom: 10px;
+    @extend %roboto-400;
+    color: #fff;
+    padding: 14px 0;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 10px;
   }
-  &__error{
+
+  &__error {
     color: $accent;
     display: block;
   }
-  &__text{
+
+  &__text {
     margin-bottom: 25px;
     color: #bfbfbf;
+  }
+}
+
+.page-404 {
+  padding: 110px 0;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 522px;
+  }
+
+  &__images {
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  &__text {
+    margin-bottom: 50px;
+  }
+
+  &__link {
+    @extend %btn;
+    .btn_bg {
+      box-shadow: 0px 5px 25px 0px rgba(254, 62, 87, 0.35);
+    }
+
   }
 }
 
