@@ -47,10 +47,7 @@
 .user {
   display: flex;
 
-  &__link+.user__link
-
-  /* :not(:last-child) */
-    {
+  &__link+.user__link {
     padding-left: 25px;
   }
 
@@ -58,7 +55,7 @@
     position: relative;
   }
 
-  &__numb {
+/*   &__numb {
     position: absolute;
     width: 20px;
     height: 20px;
@@ -70,7 +67,7 @@
     font-size: 12px;
     top: -9px;
     right: -11px;
-  }
+  } */
 }
 
 
@@ -236,6 +233,7 @@
     font-size: 22px;
     @extend %roboto-400;
     color: #bfbfbf;
+    border: transparent;
   }
 
   &__link:not(:last-child) {
@@ -259,6 +257,10 @@
   &__error{
     color: $accent;
     display: block;
+  }
+  &__text{
+    margin-bottom: 25px;
+    color: #bfbfbf;
   }
 }
 
