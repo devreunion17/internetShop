@@ -191,6 +191,77 @@
   }
 }
 
+.top {
+  &__container {
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    text-align: center;
+    background-size: cover;
+    background-position: top center;
+    padding: 120px 130px;
+  }
+}
+
+.modul {
+  padding-top: 110px;
+  max-width: 570px;
+  width: 100%;
+  margin: 0 auto 115px;
+
+  &__label {
+    display: block;
+    margin-bottom: 30px;
+    font-size: 16px;
+    @extend %quicksand-400;
+    color: #bfbfbf;
+  }
+
+  &__input {
+    display: block;
+    border: none;
+    width: 100%;
+    background-color: $bg ;
+    margin-top: 4px;
+    height: 60px;
+    padding: 0 15px;
+  }
+
+  &__links {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  &__link {
+    text-transform: uppercase;
+    font-size: 22px;
+    @extend %roboto-400;
+    color: #bfbfbf;
+  }
+
+  &__link:not(:last-child) {
+    margin-right: 30px;
+  }
+
+  &__link--active {
+    color: $accent;
+  }
+  &__button{
+    text-transform: uppercase;
+    background-color: $default;
+   @extend %roboto-400;
+   color: #fff;
+   padding: 14px 0;
+   border: none;
+   width: 100%;
+   cursor: pointer;
+   margin-bottom: 10px;
+  }
+  &__error{
+    color: $accent;
+    display: block;
+  }
+}
+
 .top-slider {
   background-color: $bg;
   padding-top: 65px;
@@ -696,7 +767,8 @@
     position: relative;
     block-size: cover;
     background-repeat: no-repeat;
-    &::after{
+
+    &::after {
       content: '';
       position: absolute;
       right: -20px;
@@ -712,15 +784,18 @@
     border: 1px solid #ececec;
     max-width: 370px;
     transition: box-shadow .3s;
-    &:hover{
-        box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
-        border: none;
-        .blog__link-more{
-          color: $accent;
-          &::after{
-            background-image: url(../images/blog/blog__arrow-accent.svg);
-          }
+
+    &:hover {
+      box-shadow: 20px 0px 60px 0px rgba(202, 202, 202, 0.35);
+      border: none;
+
+      .blog__link-more {
+        color: $accent;
+
+        &::after {
+          background-image: url(../images/blog/blog__arrow-accent.svg);
         }
+      }
     }
 
   }
