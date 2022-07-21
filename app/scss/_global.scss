@@ -7,7 +7,7 @@ body {
 body {
   font-size: 16px;
   line-height: 26px;
-  color: $default;
+  color: $gray;
   @extend %quicksand-500;
   display: flex;
   flex-direction: column;
@@ -49,7 +49,8 @@ body {
     color: #727272;
     padding-right: 40px;
     position: relative;
-    &:after{
+
+    &:after {
       content: "";
       position: absolute;
       background-image: url('../images/icons/bread-arrow.svg');
@@ -58,10 +59,12 @@ body {
       right: 15px;
       top: 9px;
     }
-    &:last-child{
+
+    &:last-child {
       color: $accent;
       padding-right: 0;
-      &:after{
+
+      &:after {
         display: none;
       }
     }
@@ -88,6 +91,57 @@ body {
   margin: 0 auto 55px;
   color: #bfbfbf;
 }
-.header__404--page{
+
+.header__404--page {
   background-color: $bg;
+}
+
+.pagination {
+  display: flex;
+  padding: 30px 0;
+  justify-content: center;
+
+  .pagination__list {
+    display: flex;
+    padding: 0 35px;
+  }
+
+  &__link {
+    padding: 0 15px;
+  }
+
+  &__link--active {
+    color: $accent;
+  }
+
+  &__arrow {
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 5px;
+      height: 10px;
+      top: 7px;
+    }
+  }
+
+  &__prew {
+    padding-left: 15px;
+
+    &::before {
+      background-image: url('../images/icons/panig-left.svg');
+      left: 0;
+    }
+  }
+
+  &__next {
+    padding-right: 15px;
+
+    &::before {
+      background-image: url('../images/icons/panig-right.svg');
+      right: 0;
+    }
+  }
 }

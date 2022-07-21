@@ -1,4 +1,35 @@
 $(function () {
+
+$('.shop-content__btn').on('click', function () {
+  $('.shop-content__btn').removeClass('shop-content__btn--active');
+  $(this).addClass('shop-content__btn--active');
+});
+
+$('.button-list').on('click', function () {
+  $('.product').addClass('product--list');
+});
+
+$('.button-grid').on('click', function () {
+  $('.product').removeClass('product--list');
+});
+
+
+
+  $('.select-style').styler();
+
+  $('.filter-price__input').ionRangeSlider({
+    type: "double",
+    prefix: "$",
+    onStart: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+    onChange: function (data) {
+      $('.filter-price__from').text(data.from);
+      $('.filter-price__to').text(data.to);
+    },
+  })
+
   $('.top-slider__inner').slick({
     dots: true,
     arrows: false,
@@ -57,5 +88,8 @@ $(function () {
 
   const deadline = $('.promo__clock').attr('data-time');
   initializeClock('promo__clock', deadline);
+
+
+
 
 });
