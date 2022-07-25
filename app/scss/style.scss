@@ -121,7 +121,9 @@
     @extend %roboto-400;
     margin-bottom: 39px;
   }
-
+&__form{
+  display: flex;
+}
   &__social {
     display: flex;
     align-items: center;
@@ -157,6 +159,7 @@
     border: none;
     padding: 10px 12px 12px 15px;
     box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+    margin-right: 3px;
 
     &::placeholder {
       color: $default;
